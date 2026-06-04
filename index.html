@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="description" content="Horizon lets you build high-performance web applications in minutes. An airy, minimalist workspace designed for seamless AI development."/>
     <title>Horizon - Build Limitless Web Apps</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
@@ -60,7 +61,7 @@
         }
 
         .faq-item.active .faq-answer {
-            max-height: 200px;
+            max-height: 1000px;
             padding-top: 1rem;
             padding-bottom: 0.5rem;
         }
@@ -214,8 +215,8 @@
 <body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
 <!-- Navigation -->
 <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl rounded-full border border-white/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.05)] z-50 flex justify-between items-center py-3 px-6">
-    <a class="font-display-xl text-headline-md tracking-tighter text-primary flex items-center gap-2" href="#">
-        <svg class="h-8 w-8 text-primary" fill="none" height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+    <a class="font-display-xl text-headline-md tracking-tighter text-primary flex items-center gap-2" href="#" aria-label="Horizon Home">
+        <svg class="h-8 w-8 text-primary" fill="none" height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Horizon Logo">
             <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="2"></circle>
             <path d="M11 10V22M21 10V22M11 16H21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
         </svg>
@@ -227,14 +228,29 @@
         <a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-body-md text-body-md scale-95 active:scale-90 transition-transform" href="#faq">FAQ</a>
     </div>
     <div class="flex items-center gap-4">
-        <button class="text-on-surface-variant hover:text-primary transition-colors duration-300 scale-95 active:scale-90 transition-transform flex items-center justify-center">
+        <button class="text-on-surface-variant hover:text-primary transition-colors duration-300 scale-95 active:scale-90 transition-transform flex items-center justify-center" aria-label="Language Selector">
             <span class="material-symbols-outlined">language</span>
         </button>
-        <a class="bg-white/40 text-on-surface border border-white/60 shadow-sm backdrop-blur-md font-body-md text-body-md font-medium px-6 py-2 rounded-full hover:bg-white/60 transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="#contact">
+        <a class="hidden md:inline-block bg-white/40 text-on-surface border border-white/60 shadow-sm backdrop-blur-md font-body-md text-body-md font-medium px-6 py-2 rounded-full hover:bg-white/60 transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="#contact">
             Start Building
         </a>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center p-2" aria-label="Toggle Menu">
+            <span class="material-symbols-outlined text-[28px]" id="mobile-menu-icon">menu</span>
+        </button>
     </div>
 </nav>
+
+<!-- Mobile Drawer Menu -->
+<div id="mobile-menu" class="hidden md:hidden fixed top-24 left-1/2 -translate-x-1/2 w-[95%] rounded-3xl border border-white/60 bg-white/95 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.1)] z-40 p-6 flex flex-col gap-4">
+    <a class="text-on-surface font-medium hover:text-primary transition-colors duration-300 font-body-lg text-lg py-2" href="#features" onclick="closeMobileMenu()">Product</a>
+    <a class="text-on-surface font-medium hover:text-primary transition-colors duration-300 font-body-lg text-lg py-2" href="#showcase" onclick="closeMobileMenu()">Use Cases</a>
+    <a class="text-on-surface font-medium hover:text-primary transition-colors duration-300 font-body-lg text-lg py-2" href="#pricing" onclick="closeMobileMenu()">Pricing</a>
+    <a class="text-on-surface font-medium hover:text-primary transition-colors duration-300 font-body-lg text-lg py-2" href="#faq" onclick="closeMobileMenu()">FAQ</a>
+    <a class="bg-primary text-white text-center font-body-md text-body-md font-medium px-6 py-3.5 rounded-full hover:bg-primary/95 transition-colors duration-300 mt-2" href="#contact" onclick="closeMobileMenu()">
+        Start Building
+    </a>
+</div>
 
 <main class="w-full">
     <!-- Section 1: Hero -->
@@ -646,7 +662,7 @@
 <footer class="bg-transparent w-full py-8 text-secondary font-body-md text-body-md relative z-20">
     <div class="max-w-[1515px] mx-auto px-container-padding flex flex-col md:flex-row justify-between items-center gap-8 border-t border-black/5 pt-8">
         <div class="font-display-xl text-headline-md hover:opacity-100 transition-opacity flex items-center gap-2 text-on-surface">
-            <svg class="h-6 w-6 text-on-surface" fill="none" height="24" viewbox="0 0 32 32" width="24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="h-6 w-6 text-on-surface" fill="none" height="24" viewbox="0 0 32 32" width="24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Horizon Logo">
                 <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="2"></circle>
                 <path d="M11 10V22M21 10V22M11 16H21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
             </svg>
@@ -690,7 +706,7 @@
         cursorX += dx * 0.2;
         cursorY += dy * 0.2;
 
-        cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
+        cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)` + (cursor.classList.contains('active') ? ' scale(2)' : '');
 
         requestAnimationFrame(animate);
     }
@@ -708,11 +724,11 @@
     const links = document.querySelectorAll('a, button, [onclick], textarea');
     links.forEach(link => {
         link.addEventListener('mouseenter', () => {
-            cursor.style.transform += ' scale(2)';
+            cursor.classList.add('active');
             cursor.style.backgroundColor = '#FF5E3A';
         });
         link.addEventListener('mouseleave', () => {
-            cursor.style.transform = cursor.style.transform.replace(' scale(2)', '');
+            cursor.classList.remove('active');
             cursor.style.backgroundColor = 'white';
         });
     });
@@ -740,6 +756,33 @@
         const y = event.clientY - rect.top;
         cta.style.setProperty('--mouse-x', `${x}px`);
         cta.style.setProperty('--mouse-y', `${y}px`);
+    }
+
+    // Mobile Navigation Drawer Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenuIcon.textContent = 'close';
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenuIcon.textContent = 'menu';
+            }
+        });
+    }
+
+    function closeMobileMenu() {
+        if (mobileMenu) {
+            mobileMenu.classList.add('hidden');
+        }
+        if (mobileMenuIcon) {
+            mobileMenuIcon.textContent = 'menu';
+        }
     }
 </script>
 </body>
