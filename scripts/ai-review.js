@@ -40,6 +40,8 @@ Analyze it for:
 3. SEO improvements (missing meta tags, alt tags, heading hierarchy).
 4. Styling defects or non-responsive layout issues.
 
+*Note: For this specific prototype/workshop project, using the Tailwind Play CDN (cdn.tailwindcss.com) is acceptable and should NOT be flagged as a [BLOCKER]. You may list it as a recommendation or warning, but do NOT prefix it with '[BLOCKER]'.*
+
 If you find any CRITICAL blockers that should STOP the deployment, you must explicitly start the feedback line with '[BLOCKER]'.
 Otherwise, write constructive recommendations.
 
