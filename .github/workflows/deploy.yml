@@ -33,9 +33,9 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node scripts/ai-review.js
       - name: Setup Pages
-        uses: actions/configure-pages@1f0c5cdb3328854743209590807b1d1f05788390 # v4.0.0
+        uses: actions/configure-pages@1f0c5cde4bc74cd7e1254d0cb4de8d49e9068c7d # v4.0.0
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@56afc6092a6039535c3451e069176378e9063c64 # v3.0.1
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
         with:
           path: '.'
       - name: Deploy to GitHub Pages
